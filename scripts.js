@@ -26,6 +26,13 @@ document.getElementById('minute').innerHTML = minutes;
 
 setInterval(clock, 1000);
 
+// WEATHER APP JS START
+
+
+
+
+// WEATHER APP JS END
+
 let a1a1 = document.getElementById("starttmenu");
 a1a1.addEventListener("mouseleave", function(){
     document.getElementById("startMenu").style.display = "none";
@@ -58,7 +65,6 @@ VolvO.addEventListener("mouseover", function() {
     document.getElementById("gamesTab").style.display = "none";
     document.getElementById("accessorieS").style.display = "none";
 })
-
 
 
 function toggleMenu() {
@@ -175,6 +181,10 @@ moveIt("fldrframework3", "frameworkmove3");
 moveIt("move15", "move15");
 moveIt("move20", "move20");
 moveIt("w3", "w3");
+moveIt("premcarsicon", "premcarsicon");
+moveIt("welcomefoldermove", "welcomefoldergrab");
+moveIt("weatherfolder", "frameworkmove4");
+moveIt("weatherdesktopicon", "weatherdesktopicon");
 
 function w3alert() {
     alert("aren't you at work?");
@@ -211,6 +221,13 @@ document.addEventListener("mousemove", function(e) {
 
 }
 
+document.getElementById("movableAswell").addEventListener("dblclick", function() {
+    document.getElementById("welcomefoldermove").style.display = "block";
+})
+document.getElementById("weatherdesktopicon").addEventListener("dblclick", function() {
+    document.getElementById("weatherfolder").style.display = "block";
+})
+
 function getWindowToTaskbar() {
     let l123 = document.getElementById("taskbarOpenedFolder");
     if (l123.style.backgroundImage === 'url("images\/myComputer-taskbar-onFocusimg.png")') {
@@ -230,6 +247,14 @@ function minimizeWindow1(x3, y4, z5, h6, j7) {
     oltcit.style.display = "none";
     ford.style.backgroundImage = 'url("images\/myComputer-taskbar-outtaFocusimg.png")';
 }
+// focusThisFolder();
+// focusThisFolder("fldrframework2");
+// focusThisFolder("weatherfolder");
+// function focusThisFolder(thisFolder) {
+//     document.getElementById(thisFolder).style.zIndex = "300";
+//     console.log("testfocus");
+// }
+
 
 function minimizeWindow2(x3, y4, z5, h6, j7) {
     let oltcit = document.getElementById("draggable-full");
@@ -264,6 +289,9 @@ seventh.addEventListener("mouseover", function() {
     document.getElementById("favvv").style.display = "none";
 })
 
+document.getElementById("weatheracc").addEventListener("click", function() {
+    document.getElementById("weatherfolder").style.display = "block";
+})
 function openengineanimation() {
     document.getElementById("fldrframework").style.display = "block";
     document.getElementById("fldrframework").style.zIndex = 10;
@@ -281,6 +309,10 @@ function open3danimation() {
     document.getElementById("fldrframework2").style.display = "block";
 }
 
+function openpremcars() {
+    window.open("/SomeCarSharingWebsite/index.html", "_blank", "width=360,height=740,left=400,top=150");
+}
+
 function closegame() {
     document.getElementById("fldrframework3").style.display = "none";
 }
@@ -289,11 +321,27 @@ function openfirstgame() {
     document.getElementById("fldrframework3").style.display = "block";
 }
 
+function closeGreetingsFolder() {
+    document.getElementById("welcomefoldermove").style.display = "none";
+}
+function closeWeatherFolder() {
+    document.getElementById("weatherfolder").style.display = "none";
+}
+
 function shutdown() {
     document.getElementById("mainContainer").style.filter = "brightness(1%)";
 }
 // canvasgamescript
-console.log("Asd");
+let isGameOpen = false;
+let aqweqwe = document.getElementById("fldrframework3").addEventListener("click", function() {
+    isGameOpen = true;
+});
+
+
+
+if (isGameOpen) {
+
+console.log("ASD");
 
 let canvas = document.getElementById("game-canvas");
 let ctx = canvas.getContext("2d");
@@ -384,8 +432,8 @@ function draw() {
         else {
             lives--;
             if(!lives) {
-                alert("Game Over");
-            document.location.reload();
+            //     alert("Game Over");
+            // document.location.reload();
             // clearInterval(interval); // Chrome
             }
             else {
@@ -445,8 +493,8 @@ function collisionDetection() {
                     b.status = 0;
                     score++;
                     if(score == brickRowCount * brickColumnCount) {
-                        alert("Congrats, you WON!" + score);//needs some improvement
-                        document.location.reload();
+                        // alert("congrats test test test");//needs some improvement
+                        // document.location.reload();
                         // clearInterval(interval);//Chrome again
                     }
                 }
@@ -467,6 +515,7 @@ function drawLives() {
 }
 
 draw();
+} 
 
 // canvasgamescriptend
 

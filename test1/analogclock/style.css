@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.clock-container {
+    margin: 100px auto;
+    background-image: url("images/moon.png");
+    box-sizing: border-box;
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    animation-name: rotate;
+    animation-duration: 700s;
+    animation-iteration-count: 3;
+    animation-timing-function: linear;
+    animation-delay: 0ms;
+}
+
+/* @keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+} */
+
+.clock {
+    height: 500px;
+    width: 500px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    transform: scale(0.9);
+    box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.4);
+}
+
+.hand {
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transform-origin: bottom center;
+}
+
+.center-dot {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: calc(50% - 12px);
+    right: calc(50% - 12px);
+    border-radius: 50%;
+}
+
+.hours-hand {
+    left: 241px;
+    top: 100px;
+    height: 150px;
+    width: 18px;
+}
+
+.minutes-hand {
+    left: 246px;
+    top: 30px;
+    height: 220px;
+    width: 8px;
+}
+
+.seconds-hand {
+    left: 249px;
+    top: 4px;
+    height: 246px;
+    width: 2px;
+}
+
+

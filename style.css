@@ -1,6 +1,26 @@
-* {
-    /* background-color: darkorange; */
+.welcome-screen {
+    margin: 0 auto;
+    width: 50vw;
+    min-width: 700px;
+    max-width: 700px;
+    border: 1px solid black;
+    height: 100vh;
+    background: pink;
+    color: black;
+    z-index: 150;
+    overflow: hidden;
+    display: none;
 }
+/* .unitate {
+    height: 1300px;
+    width: 570px;
+    position: absolute;
+    left: 1400px;
+    top: -55px;
+    background-image: url("images/case3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 .CRT {
     background-image: url("images/CRT.png");
     z-index: -1;
@@ -25,8 +45,11 @@
     margin-left: 148px;
     position: relative;
     z-index: 0;
-    background-image: url("images/dotawallpaper2.png");
-    /* background-image: url("images/windowswallpaper.png"); */
+    /* background-image: url("images/dotawallpaper2.png"); */
+    background-image: url("images/windows98.jpg");
+    background-size: contain;
+    background-origin: top;
+    background-repeat: no-repeat;
     /* transform: rotateY(15deg);
     transform-style: preserve-3d;
     perspective: 50em; */
@@ -202,17 +225,17 @@
     background-image: url("images/clockimg.png");
 }
 
-.secondacc {
+.weatheracc {
     position: absolute;
     width: 153px;
     height: 20px;
     box-sizing: border-box;
     top: 21px;
     left: 1px;
-    background-image: url("images/placeholderimgalt.png");
+    background-image: url("images/weatherimg1.png");
 }
-.secondacc:hover {
-    background-image: url("images/placeholderimg.png");
+.weatheracc:hover {
+    background-image: url("images/weatherimg2.png");
 }
 
 .thirdacc {
@@ -528,7 +551,6 @@
     height: 39px;
     box-sizing: border-box;
     bottom: 340px;
-    // top: 2px;
     right: 2px;
     background-image: url("images/tenth-box-img.png");
 }
@@ -555,7 +577,6 @@
     border-top: solid 1px rgb(128,128,128);
     border-bottom: solid 1px white;
     position: absolute;
-    // top: 41px;
     bottom: 338px;
     right: 4px;
 }
@@ -976,9 +997,9 @@
     position: absolute;
     box-sizing: border-box;
     width: 32px;
-    height: 32px;
+    height: 35px;
     text-align: center;
-    background-image: url("images/ottoanimationicon.png");
+    background-image: url("images/ottoanimationicon1.png");
     top: 3px;
     right: 11px;
 }
@@ -1029,6 +1050,53 @@
     background-image: url("images/w3icon.png");
     top: 1px;
     right: 9px;
+}
+
+.folder-weather {
+    width: 51px;
+    height: 55px;
+    position: absolute; 
+    top: 175px;
+    right: 15px;
+    text-align: center;
+}
+.folder-weather:hover {
+    text-emphasis-color: white;
+    border: 1px dotted black;
+}
+
+.desktopweathericon {
+    position: absolute;
+    box-sizing: border-box;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    background-image: url("images/weathericon.png");
+    top: 1px;
+    right: 9px;
+}
+
+.folder-premcars {
+    width: 51px;
+    height: 55px;
+    position: absolute; 
+    top: 245px;
+    right: 18px;
+    text-align: center;
+}
+.folder-premcars:hover {
+    text-emphasis-color: white;
+    border: 1px dotted black;
+}
+.desktoppremcarsicon {
+    position: absolute;
+    box-sizing: border-box;
+    width: 35px;
+    height: 31px;
+    text-align: center;
+    background-image: url("images/premcarsicon.png");
+    top: 1px;
+    right: 6px;
 }
 
 .folder-work1 {
@@ -1156,7 +1224,8 @@
     position: absolute;
     box-sizing: border-box;
     width: 1016px;
-    height: 680px;
+    height: 647px;
+/* modificare height de la 680 la 647 la 24 sept. */
     border-right: 1px solid rgb(208, 207, 192);
     border-top: 1px solid rgb(63, 63, 63);
     border-bottom: 1px solid white;
@@ -1228,7 +1297,8 @@
     top: 39px;
     font-size: 11px;
     left: 4px;
-    background: blue;
+    /* background: blue; */
+    background: rgb(0, 128, 128);
     color: white;
     left: 0px;
     font-family: sans-serif;
@@ -1347,6 +1417,21 @@
     border-left: 1px solid rgb(208, 207, 192);
     display: none;
 }
+.weathercontainer {
+    box-sizing: border-box;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+    border-top: 1px solid rgb(208, 207, 192);
+    border-right: 1px solid rgb(63, 63, 63);
+    border-bottom: 1px solid rgb(63, 63, 63);
+    border-left: 1px solid rgb(208, 207, 192);
+    display: none;
+}
+/* .weathercontainer:active {
+} */
 
 /* .folderframework2 {
     display: none;
@@ -1400,6 +1485,14 @@
     background-repeat: no-repeat;
 }
 
+.folderframeworkicon4 {
+    position: absolute;
+    background-image: url("images/weatherfoldericon.png");
+    height: 18px;
+    width: 450px;
+    background-repeat: no-repeat;
+}
+
 .folder-test1-close2 {
     box-sizing: border-box;
     border-top: 1px solid white;
@@ -1415,13 +1508,18 @@
     cursor: pointer;
 }
 
-.folderframeworkcontainer {
+.folderframeworkcontainer, .weatherfoldercontainer {
     position: absolute;
     box-sizing: border-box;
     width: 496px;
     height: 476px;
     background: lightgoldenrodyellow;
     top: 20px;
+}
+.weatherfoldercontainer {
+    background: rgb(208, 207, 192);
+    padding: 5px;
+    padding-top: 25px;
 }
 /* OCA BEGINS HERE */
 .containerotto {
@@ -1636,7 +1734,7 @@
     background: white;
     top: -65px;
     left: 88px;
-    background-image: url(images/spark.png);
+    background-image: url(ottocycle/spark.png);
 }
 
 .spark {
@@ -1969,3 +2067,98 @@
     margin-top: 30px;
 }
 /* canvasgameend */
+.welcomefolder  {
+    box-sizing: border-box;
+    height: 730px;
+    width: 450px;
+    background: white;
+    left: calc(50% - 225px);
+    top: 5px;
+    position: absolute;
+    /* background-color: rgb(208, 207, 192); */
+    border-top: 1px solid rgb(208, 207, 192);
+    border-right: 1px solid rgb(63, 63, 63);
+    border-bottom: 1px solid rgb(63, 63, 63);
+    border-left: 1px solid rgb(208, 207, 192);
+    z-index: 200;
+    display: none;
+}
+.welcomefolderinner {
+    box-sizing: border-box;
+    width: 448px;
+    height: 728px;
+    border-top: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(127, 127, 127);
+    border-bottom: 1px solid rgb(127, 127, 127);
+    border-left: 1px solid rgb(255, 255, 255);
+    background-color: rgb(208, 207, 192);
+}
+.welcomefoldertop {
+    box-sizing: border-box;
+    width: 444px;
+    height: 18px;
+    margin-top: 1px;
+    margin-left: 1px;
+    background-color: rgb(0, 0, 128);
+}
+.welcomefoldercontainer {
+    box-sizing: border-box;
+    position: absolute;
+    width: 442px;
+    height: px;
+    left: 3px;
+    bottom: 3px;
+    border-right: 1px solid white;
+    /* border-top: 1px solid rgb(127, 127, 127); */
+    /* border-bottom: 1px solid white; */
+    border-left: 1px solid rgb(127, 127, 127);
+}
+.welcomefoldertopleftimg {
+    width: 410px;
+    height: 18px;
+    position: absolute;
+    cursor: move;
+    box-sizing: border-box;
+    background-image: url("images/greetingsfoldertopimg.png");
+    background-repeat: no-repeat;
+}
+.folder-test1-closeGreetings {
+    box-sizing: border-box;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid rgb(63, 63, 63);
+    border-bottom: 1px solid rgb(63, 63, 63);
+    right: 4px;
+    height: 14px;
+    width: 16px;
+    margin-top: 2px;
+    background-color: rgb(208, 207, 192);
+    position: absolute;
+    cursor: pointer;
+}
+.welcomefoldertitle {
+    padding: 5px 0 5px 30px;
+}
+.welcomefoldertext {
+    padding: 0 5px;
+}
+.mainTable {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    margin-top: 7px;
+    border-collapse: collapse;
+}
+.mainTable tr {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+td, th {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

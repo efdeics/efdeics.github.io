@@ -1,0 +1,441 @@
+/* body {
+    background: lightgoldenrodyellow;
+} */
+
+.containerotto {
+    position: absolute;
+    left: calc(50% - 80px);
+    top: 250px;
+    width: 200px;
+    height: 280px;
+    /* heightu era 280 initial */
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    border-bottom: none;
+    background: rgb(143, 168, 151);
+}
+
+.combustion-chamber {
+    position: relative;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    width: 198px;
+    height: 95px;
+    background: white;
+    animation-iteration-count: infinite;
+    animation-name: combustion-chamber;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-duration: 2s;
+}
+
+@keyframes combustion-chamber {
+    0% {
+        background: white;
+    }
+    14% {
+        background: lightblue;
+    }
+    50% {
+        background: lightblue;
+    }
+    51% {
+        background: orangered;
+    }
+    74% {
+        background: orange;
+    }
+
+}
+
+.intake {
+    position: absolute;
+    width: 108px;
+    height: 60px;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    top: -60px;
+    left: -20px;
+    border-top: 3px solid gray;
+    border-right: 3px solid gray;
+    border-top-right-radius: 70%;
+    /* border-bottom: 3px solid gray; */
+    border-lefT: none;
+    background: lightblue;
+}
+
+.intake-bottom-border-in {
+    position: absolute;
+    box-sizing: border-box;
+    height: 3px;
+    width: 30px;
+    z-index: 1;
+    background: gray;
+    top: 54px;
+    left: 85px;
+}
+
+.intake-bottom-border-ext {
+    position: absolute;
+    box-sizing: border-box;
+    height: 3px;
+    width: 60px;
+    z-index: 1;
+    background: gray;
+    top: 54px;
+    left: 0px;
+}
+
+.exhaust-bottom-border-in {
+    position: absolute;
+    box-sizing: border-box;
+    height: 3px;
+    width: 30px;
+    z-index: 1;
+    background: gray;
+    top: 54px;
+    left: -10px;
+}
+
+.exhaust-bottom-border-ext {
+    position: absolute;
+    box-sizing: border-box;
+    height: 3px;
+    width: 60px;
+    z-index: 1;
+    background: gray;
+    top: 54px;
+    left: 45px;
+}
+
+.intake-valve {
+    position: absolute;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    width: 35px;
+    height: 80px;
+    left: 55px;
+    top: -20px;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-name: intake-valve-animation;
+}
+
+@keyframes intake-valve-animation {
+    12% {
+        transform: translateY(3px);
+    }
+    25% {
+        transform: translateY(0);
+    }
+}
+
+.intake-valve-face {
+    position: absolute;
+    box-sizing: border-box;
+    background: black;
+    top: 77px;
+    width: 100%;
+    height: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.intake-valve-stem {
+    position: absolute;
+    box-sizing: border-box;
+    background: black;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    left: calc(50% - 2px);
+}
+
+.exhaust-valve {
+    position: absolute;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    width: 35px;
+    height: 80px;
+    left: 15px;
+    top: -20px;
+    animation-iteration-count: infinite;
+    animation-delay: 1.3s;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-name: exhaust-valve-animation;
+}
+
+@keyframes exhaust-valve-animation {
+
+    25% {
+        transform: translateY(3px);
+    }
+    34% {
+        transform: translateY(0);
+    }
+}
+
+.exhaust-valve-face {
+    position: absolute;
+    box-sizing: border-box;
+    background: black;
+    top: 77px;
+    width: 100%;
+    height: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.exhaust-valve-stem {
+    position: absolute;
+    box-sizing: border-box;
+    background: black;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    left: calc(50% - 2px);
+}
+
+.spark-plug {
+    position: absolute;
+    box-sizing: border-box;
+    border-bottom: 3px solid black;
+    width: 24px;
+    height: 65px;
+    background: white;
+    top: -65px;
+    left: 88px;
+    background-image: url(spark.png);
+}
+
+.spark {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: yellow;
+    left: 8px;
+    top: 65px;
+    border: 1px solid orangered;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-name: spark-animation;
+    z-index: 5;
+    opacity: 0;
+}
+
+@keyframes spark-animation {
+    0% {
+        opacity: 0.5;
+    }
+    1% {
+        opacity: 1;
+    }
+    2.5% {
+        transform: scale(4, 4);
+    }
+    3% {
+        opacity: 0;
+    }
+}
+
+.exhaust {
+    position: absolute;
+    width: 108px;
+    height: 60px;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    top: -60px;
+    left: 112px;
+    border-top: 3px solid gray;
+    border-left: 3px solid gray;
+    border-top-left-radius: 70%;
+    /* border-bottom: 3px solid gray; */
+    border-right: none;
+    background: orange;
+}
+
+.container-bottom {
+    position: absolute;
+    width: 200px;
+    height: 198px;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    top: 180px;
+    border-radius: 50%;
+    background: rgb(143, 168, 151);
+}
+
+.container-left-wall {
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    width: 20px;
+    height: 205px;
+    border-bottom-right-radius: 100px;
+    background: gray;
+}
+
+.container-right-wall {
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    width: 20px;
+    height: 205px;
+    border-bottom-left-radius: 100px;
+    background: gray;
+}
+
+.cylinder {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 20px;
+    /* border: 1px solid black; */
+    width: 158px;
+    height: 172px;
+}
+
+.piston-head {
+    position: absolute;
+    box-sizing: border-box;
+    /* border: 1px solid white; */
+    height: 85px;
+    width: 160px;
+    top: 9px;
+    border-top: 7px solid black;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    background: lightgray;
+    animation-iteration-count: infinite;
+    animation-delay: 0ms;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-name: piston-head-animation;
+    z-index: 3;
+}
+
+@keyframes piston-head-animation {
+    50% {
+        transform: translateY(90px);
+    }
+}
+
+.piston-head-link {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    left: calc(50% - 15px);
+    top: 30px;
+    background: white;
+}
+
+.piston-head-ring1 {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 5px;
+    background: black;
+}
+.piston-head-ring2 {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 10px;
+    background: black;
+}
+
+.piston-rod {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background: black;
+    width: 30px;
+    height: 200px;
+    top: 45px;
+    z-index: 1;
+    left: calc(50% - 15px);
+    animation-name: piston-rod-animation;
+    /* animation-iteration-count: infinite; */
+    animation-delay: 0ms;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    transform-origin: top center;
+    animation-iteration-count: infinite;
+    /* top: 96px;
+    transform: rotateZ(14deg); */
+}
+
+@keyframes piston-rod-animation {
+    25% {
+        transform: rotateZ(-11deg) translateY(50px);
+    }
+    50% {
+        transform: rotateZ(0deg) translateY(90px);
+    }
+    75% {
+        transform: rotateZ(11deg) translateY(50px);
+    }
+    100% {
+        transform: rotateZ(0deg) translateY(0px);
+    }
+}
+
+.crankshaft {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 184px;
+    height: 184px;
+    border-radius: 50%;
+    top: calc(50% - 92px);
+    right: calc(50% - 92px);
+    background: darkgray;
+    animation-iteration-count: infinite;
+    animation-delay: 0ms;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-name: crankshaft-animation;
+    z-index: 3;
+}
+
+@keyframes crankshaft-animation {
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.crankshaft-link {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    left: calc(50% - 15px);
+    top: 30px;
+    background: white;
+}

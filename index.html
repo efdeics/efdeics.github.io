@@ -7,9 +7,52 @@
     <!-- <link rel="style" href="ottocycle/style.css"> -->
 </head>
 <body>
+<div class="welcome-screen">
+    Lorem ipsum, dolor sit amet consectetur 
+    adipisicing elit. Quisquam quas molestias 
+    modi quis qui. Nulla facilis ratione aperiam, 
+    totam eos vero tempore maxime impedit omnis veritatis 
+    est, doloremque laudantium. Distinctio, eius officia 
+    odit omnis, officiis iure voluptatibus dignissimos 
+    aliquid error iste nihil debitis fugiat nulla minima? 
+    Molestias facere ipsa tempore!
+</div>
 <div class="CRT">
+    <!-- <div class="unitate"></div> -->
 <div class="container" id="mainContainer">
+    <div class="welcomefolder" id="welcomefoldermove">
+        <div class="welcomefolderinner">
+            <div class="welcomefoldertop" id="welcomefoldergrab">
+                <div class="welcomefoldertopleftimg"></div>
+                <div class="folder-test1-closeGreetings" onclick="closeGreetingsFolder()">
+                    <div class="folder-test1-close-inner">
+                        <div class="folder-test1-close-theX">X</div>
+                    </div>
+                </div>
+            </div>
+               <div class="welcomefoldertitle">So glad you're here!</div>
+               <div class="welcomefoldertext">
+                    <!-- &nbsp This is my main project, and also (temporarily) 
+                    the container for most of 
+                   my work, but due to the nature of it it's not very mobile
+                   friendly. If you are on mobile, please refer to this link instead.
+                    </br>
+                    &nbsp It's a work in progress, but so far it features the following: -->
+                    Placeholder
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    Sources for images,icons
+                </div>
+            </br>
+        
 
+            <div class="welcomefoldercontainer">
+            </div>
+        </div>
+    </div>
     <div class="folderframework" id="fldrframework">
         <div class="folderframeworborder">
             <div class="folderframeworktop" id="frameworkmove">
@@ -72,7 +115,29 @@
             </div>
         </div>
     </div>
-
+<!-- weatherAppContainerBegins     -->
+    <div class="weathercontainer" id="weatherfolder">
+            <div class="folderframeworborder">
+                    <div class="folderframeworktop" id="frameworkmove4">
+                        <div class="folderframeworkicon4"></div>
+                        <div class="folder-test1-close2" onclick="closeWeatherFolder()">
+                            <div class="folder-test1-close-inner">
+                                <div class="folder-test1-close-theX">X</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weatherfoldercontainer">
+                        <h2 style="text-align: center">Currently, there are:</h2>
+                        <div id="temperatureDiv" style="text-align: center">
+                            <h1>- °<span>C</span></h1>
+                        </div>
+                        <h2 style="text-align: center">in</h3>
+                        <h1 style="text-align: center">Dortmund</h1>
+                        <div class="weathertypeimg"></div>
+                    </div>
+            </div>
+    </div>
+<!-- weatherAppContainerEnds     -->
 <!-- secondAnimationfolder -->
 
     <div class="folderframework2" id="fldrframework2">
@@ -112,9 +177,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="folderframeworkcontainer">
+                <div class="folderframeworkcontainer">
                     <canvas class="game1" id="game-canvas" width="480" height="320"></canvas>
-                </div> -->
+                </div>
             </div>
     </div>
 <!-- firstGameFolder -->
@@ -159,6 +224,20 @@
         <div class="w3-icon"></div>
         <div class="readme-name">
             Warcraft III: The Frozen Throne
+        </div>
+    </div>
+
+    <div class="folder-weather" id="weatherdesktopicon">
+        <div class="desktopweathericon"></div>
+        <div class="readme-name">
+            Weather
+        </div>
+    </div>
+
+    <div class="folder-premcars" id="premcarsicon" ondblclick="openpremcars()">
+        <div class="desktoppremcarsicon"></div>
+        <div class="readme-name">
+            PremCars
         </div>
     </div>
     
@@ -381,8 +460,8 @@
                     <div class="accessories" id="forTest" onmouseover="openAccTab()">
                         <div class="accessories-tab" id="accessorieS">
                             <div class="accessories-tab-in">
-                                <a href="analogclock/index.html"><div class="firstacc" href=></div></a>
-                                <div class="secondacc"></div>
+                                <a target="_blank" href="analogclock/index.html"><div class="firstacc" href=></div></a>
+                                <div class="weatheracc" id="weatheracc"></div>
                                 <div class="thirdacc"></div>
                             </div>
 
