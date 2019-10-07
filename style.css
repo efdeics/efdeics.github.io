@@ -988,10 +988,10 @@
     right: 15px;
     text-align: center;
 }
-.folder-ottoanimation:hover {
+/* .folder-ottoanimation:hover {
     text-emphasis-color: white;
     border: 1px dotted black;
-}
+} */
 
 .ottoanimation-icon {
     position: absolute;
@@ -1012,10 +1012,10 @@
     right: 15px;
     text-align: center;
 }
-.folder-3danimation:hover {
+/* .folder-3danimation:hover {
     text-emphasis-color: white;
     border: 1px dotted black;
-}
+} */
 
 .cubeanimation-icon {
     position: absolute;
@@ -1036,10 +1036,10 @@
     left: 15px;
     text-align: center;
 }
-.folder-w3:hover {
+/* .folder-w3:hover {
     text-emphasis-color: white;
     border: 1px dotted black;
-}
+} */
 
 .w3-icon {
     position: absolute;
@@ -1060,10 +1060,10 @@
     right: 15px;
     text-align: center;
 }
-.folder-weather:hover {
+/* .folder-weather:hover {
     text-emphasis-color: white;
     border: 1px dotted black;
-}
+} */
 
 .desktopweathericon {
     position: absolute;
@@ -1084,10 +1084,10 @@
     right: 18px;
     text-align: center;
 }
-.folder-premcars:hover {
+/* .folder-premcars:hover {
     text-emphasis-color: white;
     border: 1px dotted black;
-}
+} */
 .desktoppremcarsicon {
     position: absolute;
     box-sizing: border-box;
@@ -1321,9 +1321,8 @@
     font-family: sans-serif;
     letter-spacing: 1px;
 }
-
-.readme:hover {
-    /* background-color: blue; */
+ /* background-color: blue; intial on:hover background*/
+/* .readme:hover {
     text-emphasis-color: white;
     border: 1px dotted black;
 }
@@ -1351,7 +1350,7 @@
 .folder-work4:hover {
     text-emphasis-color: white;
     border: 1px dotted black;
-}
+} */
 
 .taskbar-separator-div1 {
     position: absolute;

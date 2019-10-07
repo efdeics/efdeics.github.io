@@ -234,6 +234,7 @@ function getWindowToTaskbar() {
         console.log("testing");
     l123.style.backgroundImage = 'url("images\/myComputer-taskbar-outtaFocusimg.png")';
     document.querySelector(".folder-test").style.display = "none";
+    document.querySelector(".folder-test3a").style.display = "none";
     }
     else {
         l123.style.backgroundImage = 'url("images\/myComputer-taskbar-onFocusimg.png")'
@@ -310,7 +311,7 @@ function open3danimation() {
 }
 
 function openpremcars() {
-    window.open("/SomeCarSharingWebsite/index.html", "_blank", "width=360,height=740,left=400,top=150");
+    window.open("SomeCarSharingWebsite/index.html", "_blank", "width=360,height=740,left=400,top=150");
 }
 
 function closegame() {
@@ -331,19 +332,15 @@ function closeWeatherFolder() {
 function shutdown() {
     document.getElementById("mainContainer").style.filter = "brightness(1%)";
 }
+
+
 // canvasgamescript
-let isGameOpen = false;
-let aqweqwe = document.getElementById("fldrframework3").addEventListener("click", function() {
-    isGameOpen = true;
-});
 
 
-
-if (isGameOpen) {
 
 console.log("ASD");
 
-let canvas = document.getElementById("game-canvas");
+let canvas = document.getElementById("game-canvass");
 let ctx = canvas.getContext("2d");
 let x = canvas.width / 2;
 let y = canvas.height - 30;
@@ -493,8 +490,8 @@ function collisionDetection() {
                     b.status = 0;
                     score++;
                     if(score == brickRowCount * brickColumnCount) {
-                        // alert("congrats test test test");//needs some improvement
-                        // document.location.reload();
+                        alert("congrats test test test");//needs some improvement
+                        document.location.reload();
                         // clearInterval(interval);//Chrome again
                     }
                 }
@@ -515,7 +512,7 @@ function drawLives() {
 }
 
 draw();
-} 
+
 
 // canvasgamescriptend
 
