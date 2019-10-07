@@ -1,6 +1,12 @@
 body {
     max-width: 1900px;
 }
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 @media (max-width: 1920px) {
     body {
         margin: 0;
@@ -39,7 +45,7 @@ body {
     .menu {
         display: none;
     }
-    .header-container {
+    .header-title-container {
         box-sizing: border-box;
         padding: 1em 0;
         color: white;
@@ -108,7 +114,6 @@ body {
         padding: 0.5em;
         margin-bottom: 15px;
         min-height: 175px;
-
     }
     .pic {
         width: 50px;
@@ -347,6 +352,7 @@ body {
     }
     .left-item {
         padding: 0.1em;
+        cursor: pointer;
     }
     .left-title {
         font-size: 1.25em;
@@ -354,7 +360,12 @@ body {
         text-decoration-line: underline;
     }
 }
+@media (max-width: 640px) {
 
+    .partnerships {
+        margin-top: 1.97em;
+    }
+}	
 @media (min-width: 640px) {
     .features-box {
         padding-left: 4rem;
@@ -463,7 +474,7 @@ body {
     li:hover {
         color: rgb(37, 176, 243);
     }
-    .header-container {
+    .header-title-container {
         /* background: rgba(0, 0, 0, 0.7); */
         background: transparent;
         top: calc(50% - 84px);
@@ -521,7 +532,7 @@ body {
     h1 {
         font-size: 2.7em;
     }
-    .header-container {
+    .header-title-container {
         top: 30%;
     }
     .message-container {
@@ -547,8 +558,8 @@ body {
         font-size: 3em;
     }
     .plans-box {
-        margin-right: 10%;
-        margin-left: 10%;
+        margin-right: 14%;
+        margin-left: 14%;
     }
     .message-container {
         padding-left: 400px;
