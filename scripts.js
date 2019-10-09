@@ -1,4 +1,4 @@
-toggleMenu();
+﻿toggleMenu();
 
 
 // getWindowToTaskbar() 
@@ -30,16 +30,17 @@ setInterval(clock, 1000);
 let currentTemperature;
 let temperatureDiv = document.getElementById("temperature");
 let weatherDescription = document.getElementById("weatherdescription");
-const weatherapi = "https://api.darksky.net/forecast/3ff5030622be5e539781b01dd5b6c18a/44.439663,26.096306";
+
+const weatherapi = "https://fcc-weather-api.glitch.me/api/current?lat=44.439663&lon=26.096306";
 
 fetch(weatherapi).then(response => {
     return response.json();
 }).then(weathersettings => {
-    currentTemperature = Math.trunc((weathersettings.currently.temperature - 32) * 5/9);
+    /*currentTemperature = Math.trunc((weathersettings.currently.temperature - 32) * 5/9);*/
     console.log(weathersettings);
-    temperatureDiv.innerHTML = currentTemperature + "°C";
+   /* temperatureDiv.innerHTML = currentTemperature + "°C";
     weatherDescription.innerHTML = weathersettings.currently.summary;
-    console.log(weatherdescription.currently.summary);
+    console.log(weatherdescription.currently.summary); */
 });
 
 
