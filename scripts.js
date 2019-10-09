@@ -214,7 +214,7 @@ document.addEventListener("mousemove", function(e) {
 document.getElementById("movableAswell").addEventListener("dblclick", function() {
     document.getElementById("welcomefoldermove").style.display = "block";
 })
-document.getElementById("weatherdesktopicon").addEventListener("dblclick", function() {
+document.getElementById("weatherdesktopicon").addEventListener("onclick", function() {
     document.getElementById("weatherfolder").style.display = "block";
 })
 
