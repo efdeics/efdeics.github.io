@@ -30,8 +30,7 @@ setInterval(clock, 1000);
 let currentTemperature;
 let temperatureDiv = document.getElementById("temperature");
 let weatherDescription = document.getElementById("weatherdescription");
-const weatherproxy = 'http://cors-anywhere.herokuapp.com/';
-const weatherapi = `${weatherproxy}https://api.darksky.net/forecast/3ff5030622be5e539781b01dd5b6c18a/44.439663,26.096306`;
+const weatherapi = "https://api.darksky.net/forecast/3ff5030622be5e539781b01dd5b6c18a/44.439663,26.096306";
 
 fetch(weatherapi).then(response => {
     return response.json();
