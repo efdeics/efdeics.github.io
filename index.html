@@ -2,499 +2,171 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Win98replica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BCS</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="style" href="ottocycle/style.css"> -->
 </head>
 <body>
-<div class="welcome-screen">
-    Lorem ipsum, dolor sit amet consectetur 
-    adipisicing elit. Quisquam quas molestias 
-    modi quis qui. Nulla facilis ratione aperiam, 
-    totam eos vero tempore maxime impedit omnis veritatis 
-    est, doloremque laudantium. Distinctio, eius officia 
-    odit omnis, officiis iure voluptatibus dignissimos 
-    aliquid error iste nihil debitis fugiat nulla minima? 
-    Molestias facere ipsa tempore!
-</div>
-<div class="CRT">
-    <!-- <div class="unitate"></div> -->
-<div class="container" id="mainContainer">
-    <div class="welcomefolder" id="welcomefoldermove">
-        <div class="welcomefolderinner">
-            <div class="welcomefoldertop" id="welcomefoldergrab">
-                <div class="welcomefoldertopleftimg"></div>
-                <div class="folder-test1-closeGreetings" onclick="closeGreetingsFolder()">
-                    <div class="folder-test1-close-inner">
-                        <div class="folder-test1-close-theX">X</div>
+    <div class="main-container">
+        <div class="top-section" id="topsection-anchor">
+            <div class="navbar">
+                <div class="logo">PremCars</div>
+                <div class="menu">
+                    <ul class="nav-items">
+                        <li class="nav-item"><a href="#features-anchor">Features</a></li>
+                        <li class="nav-item"><a href="#howitworks-anchor">How To</a></li>
+                        <li class="nav-item"><a href="#memberships-anchor">Memberships</a></li>
+                        <li class="nav-item"><a href="#contact-anchor">Contact</a></li>
+                        <li class="nav-item">Sign In</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-title-container">
+                <h1>Premium car sharing has arrived in Bucharest</h1>
+                <div class="buttons-container">
+                    <button class="register button">Get App</button>
+                    <button class="find button">Find a car</button>
+                </div>
+            </div>
+        </div>
+        <div class="features-section" id="features-anchor">
+            <div class="features-header">WHAT WE OFFER</div>
+            <div class="features-box">
+                <div class="partnerships box">
+                        <div class="partnerships-pic pic"></div>
+                        <h3>Exclusive partnerships</h3>
+                        <p>We work with the top brands in the world like Tesla, 
+                            Mercedes, Porsche, Jaguar, and more.</p>
+                </div>
+                <div class="specialoffers box">
+                        <div class="specialoffers-pic pic"></div>
+                        <h3>Special rates for events</h3>
+                        <p>Ask us about our special rates to arrive at 
+                            your next big event in style.</p>
+                </div>
+                <div class="findcar box">
+                        <div class="findcar-pic pic"></div>
+                        <h3>The perfect car, near you</h3>
+                        <p>Use our app to easily locate the car of your choice. 
+                            Then park it in a designated PremCars zone once you're done.</p>
+                </div>
+                <div class="customerservice box">
+                        <div class="customerservice-pic pic"></div>
+                        <h3>Elite Customer Service</h3>
+                        <p>The best cars deserve the best customer service, 
+                            and we are here to help you 24/7.</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-section"></div>
+        <div class="howitworks-section" id="howitworks-anchor">
+            <div class="howitworks-header">HOW IT WORKS</div>
+            <div class="howitworks-body">
+                <div class="howitworks-description">
+                    <h3>Locate the car of your choice using our easy to
+                         use mobile app or search online.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Asperiores adipisci inventore, maxime aliquid veritatis vitae 
+                        hic explicabo perferendis, iste in voluptatibus repellat error 
+                        ullam quis dolorem. Ut odit corporis tempore.</p> 
+                    <h3>Can't get to a car? Our staff can bring it to you.</h3> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Asperiores adipisci inventore, maxime aliquid veritatis vitae 
+                        hic explicabo perferendis, iste in voluptatibus repellat error 
+                        ullam quis dolorem. Ut odit corporis tempore.</p>    
+                    <button class="howitworks-button">Learn More</button>    
+                </div>
+                <div class="howitworks-image-box">
+                    <img class="howitworks-images">
+                </div>
+            </div>
+        </div>
+        <div class="memberships-section" id="memberships-anchor">
+            <div class="memberships-header">MEMBERSHIPS</div>
+            <div class="plans-box">
+                <div class="basic plan">
+                    <div class="basicbox img">
+                        <div class="basic-plan title">BASIC</div>
+                    </div>
+                    <div class="price">€199.99</div>
+                    <div class="features-container">
+                        <div class="feature"><span class="checkedimg"><img src="images/checkedimg.png"></span>Feature 1</div>
+                        <div class="feature"><span class="checkedimg"><img src="images/checkedimg.png"></span>Feature 2</div>
+                        <div class="feature"><span class="checkedimg"><img src="images/checkedimg.png"></span>Feature 3</div>
+                        <div class="feature"><span class="checkedimg"><img src="images/uncheckedimg.png"></span>Feature 4</div>
+                        <div class="feature"><span class="checkedimg"><img src="images/uncheckedimg.png"></span>Feature 5</div>
+                        <button class="features-button">Sign In</button>
+                    </div>
+                </div>
+                <div class="plus plan">
+                    <div class="plusbox img">
+                        <div class="plus-plan title">PLUS</div>
+                    </div>
+                    <div class="price">€299.99</div>
+                    <div class="features-container">
+                        <div class="feature"><span class="checkedimg"><img src="images/checkedimg.png"></span>Feature 1</div>
+                        <div class="feature"><span class="checkedimg"><img src="images/checkedimg.png"></span>Feature 2</div>
+                        <div class="feature"><span class="checkedimg"><img src="images/checkedimg.png"></span>Feature 3</div>
+                        <div class="feature"><span class="checkedimg"><img src="images/checkedimg.png"></span>Feature 4</div>
+                        <div class="feature"><span class="checkedimg"><img src="images/uncheckedimg.png"></span>Feature 5</div>
+                        <button class="features-button">Sign In</button>
+                    </div>
+                </div>
+                <div class="professional plan">
+                    <div class="professionalbox img">
+                        <div class="professional-plan title">PROFESSIONAL</div>
+                    </div>
+                    <div class="price">€499.99</div>
+                    <div class="features-container">
+                        <div class="feature"><span class="checkedimg"><img src="images/checkedimg.png"></span>Feature 1</div>
+                        <div class="feature"><span class="checkedimg"><img src="images/checkedimg.png"></span>Feature 2</div>
+                        <div class="feature"><span class="checkedimg"><img src="images/checkedimg.png"></span>Feature 3</div>
+                        <div class="feature"><span class="checkedimg"><img src="images/checkedimg.png"></span>Feature 4</div>
+                        <div class="feature"><span class="checkedimg"><img src="images/checkedimg.png"></span>Feature 5</div>
+                        <button class="features-button">Sign In</button>
                     </div>
                 </div>
             </div>
-               <div class="welcomefoldertitle">So glad you're here!</div>
-               <div class="welcomefoldertext">
-                    </br>
-                    &nbsp This is my main project, and also (temporarily) 
-                    the container for some of 
-                   my work, but due to the nature of it it's not very mobile
-                   friendly. If you are on mobile, please refer to this link instead.</br>
-                    </br>
-                    &nbsp It's a work in progress and there are some bugs that I'm working on.
-                    Also, I'm aware of the fact that the source code is an absolute mess. 
-                    I'm working to improve that aswell. This has served as my experiments 
-                    ground, I never imagined it getting this complex and I didn't know 
-                    I'd use it in an eventual portfolio.</br>
-                    </br> &nbsp On the right side of the desktop you will find some CSS animations, 
-                    a weather app (hardcoded for Bucharest only, to avoid needing location
-                    services), and a mobile first, fully responsive 
-                    website for a fictional 
-                    car sharing services company. </br>
-                    </br> &nbsp You will also find other apps and games in the start-menu.
-                    
-                    
-                    <details style="padding: 5px; border: 1px solid black; margin-top: 15px;">
-                        <summary>Sources for images</summary>
-                        unsplash.com
-                        <br>
-                        asd.io
-                    </details>
+        </div>
+        <div class="contact-section" id="contact-anchor">
+            <div class="message-container">
+                <div class="contact-section-title">Contact Us</div>
+                <h3>Name</h3>
+                <input class="name-input" type="text" placeholder="Your Name" required="">
+                <h3>Email Address</h3>
+                <input class="email-input" type="text" placeholder="Your Email" required="">
+                <h3>Your Message</h3>
+                <textarea class="message-input" type="text" placeholder="Your Message"></textarea>
+                <button class="message-button">Send Message</button>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-text-box">
+                <div class="footer-left">
+                    <div class="left-title">Services</div>
+                    <div class="left-item">News</div>
+                    <div class="left-item">Login</div>
+                    <div class="left-item">Download App</div>
+                    <div class="left-item">FAQ</div>
                 </div>
-            </br>
-        
-
-            <div class="welcomefoldercontainer">
+                <div class="footer-left">
+                    <div class="left-title">Social</div>
+                    <div class="left-item">YouTube</div>
+                    <div class="left-item">Instagram</div>
+                    <div class="left-item">Twitter</div>
+                    <div class="left-item">Facebook</div>
+                </div>
+                <div class="footer-left">
+                    <div class="left-title">Contact Us</div>
+                    <div class="left-item">123-456-7890</div>
+                    <div class="left-item">premcars@asd.com</div>
+                    <div class="left-item">About Us</div>
+                    <div class="left-item"> Careers </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="folderframework" id="fldrframework">
-        <div class="folderframeworborder">
-            <div class="folderframeworktop" id="frameworkmove">
-                <div class="folderframeworkicon">
-
-                </div>
-                <div class="folder-test1-close2" onclick="closeengineanimation()">
-                    <div class="folder-test1-close-inner">
-                        <div class="folder-test1-close-theX">X</div>
-                    </div>
-                </div>
-            </div>
-            <div class="folderframeworkcontainer">
-<!-- /OCA BEINGS HERE -->
-                    <div class="containerotto">
-                            <div class="combustion-chamber"></div>
-                            <div class="intake">
-                                <div class="intake-bottom-border-in"></div>
-                                <div class="intake-valve">
-                                    <div class="intake-valve-face"></div>
-                                    <div class="intake-valve-stem"></div>
-                                </div>
-                                <div class="intake-bottom-border-ext"></div>
-                            </div>
-                            <div class="spark-plug">
-                                    <div class="spark"></div>
-                            </div>  
-                            <div class="exhaust">
-                                <div class="exhaust-bottom-border-in"></div>
-                                <div class="exhaust-valve">
-                                        <div class="exhaust-valve-face"></div>
-                                        <div class="exhaust-valve-stem"></div>
-                                    </div>
-                                <div class="exhaust-valve"></div>
-                                <div class="exhaust-bottom-border-ext"></div>
-                            </div>
-                            <div class="cylinder">
-                                <div class="piston-head">
-                                    <div class="piston-head-ring1"></div>
-                                    <div class="piston-head-ring2"></div>
-                                    <div class="piston-head-link"></div>
-                                </div>
-                                <div class="piston-rod">
-                    
-                                </div>
-                            </div>
-                            <div class="container-left-wall">
-                    
-                            </div>
-                            <div class="container-right-wall">
-                    
-                            </div>
-                            <div class="container-bottom">
-                                <div class="crankshaft">
-                                    <div class="crankshaft-link"></div>
-                                </div>
-                            </div>
-                        </div>
-<!-- /*OCA ENDS HERE*/ -->
-            </div>
-        </div>
-    </div>
-<!-- weatherAppContainerBegins     -->
-    <div class="weathercontainer" id="weatherfolder">
-            <div class="folderframeworborder">
-                    <div class="folderframeworktop" id="frameworkmove4">
-                        <div class="folderframeworkicon4"></div>
-                        <div class="folder-test1-close2" onclick="closeWeatherFolder()">
-                            <div class="folder-test1-close-inner">
-                                <div class="folder-test1-close-theX">X</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="weatherfoldercontainer">
-                        <h2 style="text-align: center">Currently, there are:</h2>
-                        <div id="temperatureDiv" style="text-align: center">
-                            <h1>- °<span>C</span></h1>
-                        </div>
-                        <h2 style="text-align: center">in</h3>
-                        <h1 style="text-align: center">Bucharest</h1>
-                        <div class="weathertypeimg"></div>
-                    </div>
-            </div>
-    </div>
-<!-- weatherAppContainerEnds     -->
-<!-- secondAnimationfolder -->
-
-    <div class="folderframework2" id="fldrframework2">
-            <div class="folderframeworborder">
-                <div class="folderframeworktop" id="frameworkmove2">
-                    <div class="folderframeworkicon2"></div>
-                    <div class="folder-test1-close2" onclick="close3danimation()">
-                        <div class="folder-test1-close-inner">
-                            <div class="folder-test1-close-theX">X</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="folderframeworkcontainer">
-                        <div class="container3d">
-                                <div class="cube-area">
-                                    <div class="cube123 cube-front-side"></div>
-                                    <div class="cube123 cube-right-side"></div>
-                                    <div class="cube123 cube-back-side"></div>
-                                    <div class="cube123 cube-left-side"></div>
-                                    <div class="cube123 cube-top-side"></div>
-                                    <div class="cube123 cube-bottom-side"></div>
-                                </div>
-                        </div>
-                </div>
-            </div>
-    </div>
-
-<!-- secondAnimationfolder -->
-<!-- firstGameFolder -->
-    <div class="folderframework3" id="fldrframework3">
-            <div class="folderframeworborder">
-                <div class="folderframeworktop" id="frameworkmove3">
-                    <div class="folderframeworkicon3"></div>
-                    <div class="folder-test1-close2" onclick="closegame()">
-                        <div class="folder-test1-close-inner">
-                            <div class="folder-test1-close-theX" id="closeBrick">X</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="folderframeworkcontainer">
-                    <canvas class="game1" id="game-canvas" width="480" height="320"></canvas>
-                </div>
-            </div>
-    </div>
-<!-- firstGameFolder -->
-
-
-    <div class="folder-mycomputer" id="mycom" ondblclick="openThis()">
-        <div class="mycomputer-icon"></div>
-        <div class="readme-name">
-            My Computer
-        </div>
-    </div>
-
-    <div class="folder-recyclebin" id="recbin" ondblclick="">
-            <div class="recyclebin-icon"></div>
-            <div class="readme-name">
-                Recycle Bin
-            </div>
-        </div>
-    
-    <div class="readme" id="movableAswell">
-        <div class="readme-icon"></div>
-        <div class="readme-name">
-            Read me!
-        </div>
-    </div>
-
-    <div class="folder-ottoanimation" ondblclick="openengineanimation()" id="move15">
-        <div class="ottoanimation-icon"></div>
-        <div class="readme-name">
-            Otto Cycle
-        </div>
-    </div>
-
-    <div class="folder-3danimation" ondblclick="open3danimation()" id="move20">
-        <div class="cubeanimation-icon"></div>
-        <div class="readme-name">
-            3d Animation
-        </div>
-    </div>
-
-    <div class="folder-w3" id="w3" ondblclick="w3alert()">
-        <div class="w3-icon"></div>
-        <div class="readme-name">
-            Warcraft III: The Frozen Throne
-        </div>
-    </div>
-
-    <div class="folder-weather" id="weatherdesktopicon">
-        <div class="desktopweathericon"></div>
-        <div class="readme-name">
-            Weather
-        </div>
-    </div>
-
-    <div class="folder-premcars" id="premcarsicon" onclick="openpremcars()">
-        <div class="desktoppremcarsicon"></div>
-        <div class="readme-name">
-            PremCars
-        </div>
-    </div>
-    
-    <div class="folder-test3a" id="draggable-full">
-        <div class="folder-test1-first3a" id="">
-            <div class="folder-test1-topbar3a" id="">
-                <div class="folder-test1-left-image3a" id=""></div>
-                <div class="folder-test1-minimize3a" onclick="minimizeWindow2()">
-                    <div class="folder-test1-minimize-inner">
-                        <div class="folder-test1-minimize-the-underline"></div>
-                    </div>
-                </div>
-                <div class="folder-test1-fullscreen3a" onclick="windowBackNotToFullScreen()">
-                    <div class="folder-test1-fullscreen-inner">
-                        <div class="folder-test1-fullscreen-thebox3a"></div>
-                    </div>
-                </div>
-                <div class="folder-test1-close3a" id="" onclick="closeThisfull()">
-                    <div class="folder-test1-close-inner">
-                        <div class="folder-test1-close-theX">X</div>
-                    </div>
-                </div>
-            </div>
-            <div class="folder-test1-settings3a" id="">
-                PLACEHOLDER
-            </div>
-            <div class="folder-test1-change"></div>
-            <div class="folder-test1-address"></div>
-            <div class="folder-test1-container3a" id="">
-                <div class="folder-test1-container-inner3a" id="">
-
-                        <div class="folder-work1" id="work1z">
-                                <div class="work1-icon"></div>
-                                <div class="readme-name-in">
-                                    JS Game
-                                </div>
-                        </div>
-    
-                        <div class="folder-work2" id="work2z" ondblclick="">
-                                <div class="work1-icon"></div>
-                                <div class="readme-name-in">
-                                    Animation 1
-                                </div>
-                        </div>
-    
-                        <div class="folder-work3" id="work3z" ondblclick="">
-                                <div class="work1-icon"></div>
-                                <div class="readme-name-in">
-                                    Animation 2
-                                </div>
-                        </div>
-    
-                        <div class="folder-work4" id="work4z" ondblclick="">
-                                <div class="work1-icon"></div>
-                                <div class="readme-name-in">
-                                    Clock 123
-                                </div>
-                        </div>
-
-                    <!-- <div class="readme" id="">
-                        <div class="readme-icon">
-
-                        </div>
-                        <div class="readme-name">
-                            Read me!
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-            <div class="folder-test1-movebar"></div>
-            <div class="folder-test1-botbar3a" id="">
-                PLACEHOLDER
-            </div>
-            <div class="resize-area3a" id=""></div>
-        </div>    
-    </div>
-
-    <div class="folder-test" id="draggable">
-
-        <div class="folder-test1-first" id="tst1first">
-            <div class="folder-test1-topbar" id="tst1topbar">
-                <div class="folder-test1-left-image" id="drag"></div>
-                <div class="folder-test1-minimize" onclick="minimizeWindow1()">
-                    <div class="folder-test1-minimize-inner">
-                        <div class="folder-test1-minimize-the-underline"></div>
-                    </div>
-                </div>
-                <div class="folder-test1-fullscreen" onclick="windowToFullscreen()">
-                    <div class="folder-test1-fullscreen-inner">
-                        <div class="folder-test1-fullscreen-thebox"></div>
-                    </div>
-                </div>
-                <div class="folder-test1-close" id="folder1-close" onclick="closeThis()">
-                    <div class="folder-test1-close-inner">
-                        <div class="folder-test1-close-theX">X</div>
-                    </div>
-                </div>
-            </div>
-            <div class="folder-test1-settings" id="tst1settings">
-                PLACEHOLDER
-            </div>
-            <div class="folder-test1-change"></div>
-            <div class="folder-test1-address"></div>
-            <div class="folder-test1-container" id="tst1container">
-                <div class="folder-test1-container-inner" id="tst1containerinner">
-                        
-                    <div class="folder-work1" id="work1z">
-                            <div class="work1-icon"></div>
-                            <div class="readme-name-in">
-                                JS Game
-                            </div>
-                    </div>
-
-                    <div class="folder-work2" id="work2z" ondblclick="">
-                            <div class="work1-icon"></div>
-                            <div class="readme-name-in">
-                                Animation 1
-                            </div>
-                    </div>
-
-                    <div class="folder-work3" id="work3z" ondblclick="">
-                            <div class="work1-icon"></div>
-                            <div class="readme-name-in">
-                                Animation 2
-                            </div>
-                    </div>
-
-                    <div class="folder-work4" id="work4z" ondblclick="">
-                            <div class="work1-icon"></div>
-                            <div class="readme-name-in">
-                                Clock 123
-                            </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="folder-test1-movebar"></div>
-            <div class="folder-test1-botbar" id="tst1botbar">
-                PLACEHOLDER
-            </div>
-            <div class="resize-area" id="tst1rsize"></div>
-        </div>
-    </div>
-<!--     
-    <div class="resizing-test">
-        <div class="left-folder-resize-area"></div>
-        <div class="right-folder-resize-area"></div>
-        <div class="bottom-folder-resize-area"></div>
-        <div class="folder-drag-area">resize tst</div>
-        <div class="folder-minimize"></div>
-        <div class="folder-fullscreen-toggle"></div>
-        <div class="folder-close-button"></div>
-        <div class="bottom-corner-folder-resize-area"></div>
-    </div>    
-    <div class="test-div" id="draggableE">
-        <div class="left-folder-resize-area"></div>
-        <div class="right-folder-resize-area"></div>
-        <div class="bottom-folder-resize-area"></div>
-        <div class="folder-drag-area" id="dragG">drag test</div>
-        <div class="folder-minimize"></div>
-        <div class="folder-fullscreen-toggle"></div>
-        <div class="folder-close-button" onclick="closeWindows()" id="close">X</div>
-        <div class="bottom-corner-folder-resize-area"></div>
-    </div> -->
-    <div class="clock">
-        <span id="hour"></span>
-        <span id="minute"></span>
-        <span id="second"></span>
-    </div>
-    <!--the white line that's 1 px away from the top of the taskbar-->
-    <div class="white-line"></div>
-    <div class="taskbar">
-            <div class="opened-folder-div" id="taskbarOpenedFolder" onclick="getWindowToTaskbar()">
-
-            </div>
-            <div class="taskbar-separator-div1"></div>
-            <div class="taskbar-separator-div2"></div>
-            <div class="taskbar-separator-div3"></div>
-        <div class="start-button" onclick="toggleMenu()" id="thestartbutton">
-            <div class="start-button-on-click-inner-border"></div>
-            <div class="start-button-picture"></div>
-        </div>
-        <div class="status-area">
-                <div class="volume-and-other-icons"></div>
-        </div>
-    </div>
-    <div class="start-menu-outer" id="startMenu">
-    <!--a secondary div is needed in order to accurately reproduce the original
-    borders-->     
-        <div class="start-menu" id="starttmenu">
-            <div class="menu-logo"></div>
-    <!--bot and top start menu break lines-->        
-            <div class="bottom-break-line"></div>
-            <div class="top-break-line"></div>
-    <!--enumerated bot to top-->        
-            <div class="first-box" onclick="shutdown()"></div>
-            <div class="second-box"></div>
-            <div class="third-box"></div>
-            <div class="fourth-box"></div>
-            <div class="fifth-box"></div>
-            <div class="sixth-box"></div>
-            <div class="seventh-box" id="seventh"></div>
-            <div class="eighth-box" id="eighthBox">
-
-                <div class="favourites-tab" id="favvv">
-                    <div class="favourites-tab-inner">
-                        <div class="firstfav" onclick="openengineanimation()"></div>
-                        <div class="fav2"></div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="ninth-box" onmouseover="openProgramsTab()" id="ninthBox"></div>
-            <div class="tenth-box" id="tenth"></div>
-
-            <div class="ninth-box-overlay" id="ninthBoxOverlay" onmouseover="openProgramsTab()"></div>
-
-            <div class="programs-tab" id="programsTab">
-                <div class="programs-tab-in">
-                    <div class="accessories" id="forTest" onmouseover="openAccTab()">
-                        <div class="accessories-tab" id="accessorieS">
-                            <div class="accessories-tab-in">
-                                <a target="_blank" href="analogclock/index.html"><div class="firstacc" href=></div></a>
-                                <div class="weatheracc" id="weatheracc"></div>
-                                <div class="thirdacc"></div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="games" onmouseover="openGamesTab()" id="forTestTwo">
-                        <div class="games-tab" id="gamesTab">
-                            <div class="games-tab-in">
-                                <div class="firstgame" onclick="openfirstgame()"></div>
-                                <div class="secondgame"></div>
-                                <div class="thirdgame"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-</div>
-
-<script src="scripts.js" charset="utf-8"></script>
 </body>
+</html>

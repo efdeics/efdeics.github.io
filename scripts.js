@@ -27,8 +27,21 @@ document.getElementById('minute').innerHTML = minutes;
 setInterval(clock, 1000);
 
 // WEATHER APP JS START
+let currentTemperature;
+let temperatureDiv = document.getElementById("temperature");
+let weatherDescription = document.getElementById("weatherdescription");
+const weatherproxy = 'http://cors-anywhere.herokuapp.com/';
+const weatherapi = `${weatherproxy}https://api.darksky.net/forecast/3ff5030622be5e539781b01dd5b6c18a/44.439663,26.096306`;
 
-
+fetch(weatherapi).then(response => {
+    return response.json();
+}).then(weathersettings => {
+    currentTemperature = Math.trunc((weathersettings.currently.temperature - 32) * 5/9);
+    console.log(weathersettings);
+    temperatureDiv.innerHTML = currentTemperature + "°C";
+    weatherDescription.innerHTML = weathersettings.summary;
+    console.log(weatherdescription.summary);
+});
 
 
 // WEATHER APP JS END
@@ -41,6 +54,7 @@ a1a1.addEventListener("mouseleave", function(){
     document.getElementById("gamesTab").style.display = "none";
     document.getElementById("accessorieS").style.display = "none";
     document.getElementById("favvv").style.display = "none";
+    document.getElementById("codetab").style.display = "none";
 })
 
 let fex = document.getElementById("programsTab");
@@ -56,6 +70,11 @@ peugeot.addEventListener("mouseover", function() {
     document.getElementById("ninthBoxOverlay").style.display = "none";
     document.getElementById("gamesTab").style.display = "none";
     document.getElementById("accessorieS").style.display = "none";
+    document.getElementById("codetab").style.display = "none";
+})
+
+document.getElementById("settingstab").addEventListener("mouseover", function(){
+    document.getElementById("codetab").style.display = "none";
 })
 
 let VolvO = document.getElementById("tenth");
@@ -105,37 +124,7 @@ let xaooa = document.getElementById("eighthBox");
 xaooa.addEventListener("mouseover", function() {
     document.getElementById("favvv").style.display = "block";
 })
-// function programsTabIsActive() {
-//     if (document.getElementById("programsTab").style.display = "block") {
-//         document.querySelector("#ninth-box").backgroundImage = 'url("images\/ninth-box-img2.png")';
-//     }
-// }
 
-// let offset = [0,0];
-// let divOverlay = document.getElementById ("draggable");
-// let isDown = false;
-// let actualDivOverlay = document.getElementById("drag");
-
-// actualDivOverlay.addEventListener("mousedown", function(e) {
-// isDown = true;
-// offset = [
-//     divOverlay.offsetLeft - e.clientX,
-//     divOverlay.offsetTop - e.clientY
-//  ];
-// }, true);
-
-// document.addEventListener("mouseup", function() {
-//    isDown = false;
-// }, true);
-
-// document.addEventListener("mousemove", function(e) {
-//     event.preventDefault();
-//     if (isDown) {
-//         divOverlay.style.left = (e.clientX + offset[0]) + 'px';
-//         divOverlay.style.top  = (e.clientY + offset[1]) + 'px';
-//         divOverlay.style.zIndex = 15;
-//    }
-// }, true);
 
 
 function closeWindows() {
@@ -178,6 +167,7 @@ moveIt("recbin", "recbin");
 moveIt("fldrframework", "frameworkmove");
 moveIt("fldrframework2", "frameworkmove2");
 moveIt("fldrframework3", "frameworkmove3");
+moveIt("fldrframework4", "frameworkmove6");
 moveIt("move15", "move15");
 moveIt("move20", "move20");
 moveIt("w3", "w3");
@@ -288,6 +278,7 @@ closeNine.addEventListener("mouseover", function() {
 
 seventh.addEventListener("mouseover", function() {
     document.getElementById("favvv").style.display = "none";
+    document.getElementById("codetab").style.display="block";
 })
 
 document.getElementById("weatheracc").addEventListener("click", function() {
@@ -320,6 +311,12 @@ function closegame() {
 
 function openfirstgame() {
     document.getElementById("fldrframework3").style.display = "block";
+}
+function opensecondgame() {
+    document.getElementById("fldrframework4").style.display = "block";
+}
+function closegame1() {
+    document.getElementById("fldrframework4").style.display = "none";
 }
 
 function closeGreetingsFolder() {
@@ -455,14 +452,7 @@ function draw() {
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-// document.addEventListener("mousemove", mouseMoveHandler, false);
 
-// function mouseMoveHandler(e) {
-//     let relativeX = e.clientX - canvas.offsetLeft;
-//     if(relativeX > 0 && relativeX < canvas.width) {
-//         paddleX = relativeX - paddleWidth / 2;
-//     }
-// }
 function keyDownHandler(e) {
     if(e.key == "Right" || e.key == "ArrowRight" || e.key == "d") {
         rightPressed = true;
@@ -526,42 +516,16 @@ draw();
 
 
 
-// document.getElementById("forTest").addEventListener("mouseover", function() {
-//     document.getElementById("firstGame").style.display = "none";
-// } )
 
 
-// funtion closeEntireMenu() {
-//     document.getElementById("startMenu").style.display = "none";
-// }
 
-// let l222 = document.querySelector(".opened-folder-div");
-// l222.addEventListener("click", function() {
-//     if (l122.style.backgroundImage = 'url("images/myComputer-taskbar-outtaFocusimg.png")')
-// })
 
 
 
 
-/*
-let dragItem = document.querySelector("#drag");
-let container = document.querySelector("#draggable");
 
-let active = false;
-let currentX;
-let currentX;
-let initialX;
-let initialY;
-let xOffset = 0;
-let yOffset = 0;
 
-container.addEventListener("mousedown", dragStart, false);
-container.addEventListener("mouseup", dragEnd, false);
-container.addEventListener("mousemove", drag, false);
 
-function dragStart(e) {
-    if (e.type === "")
-}
 
 
 
@@ -576,136 +540,9 @@ function dragStart(e) {
 
 
 
-/*/////////////////////////////////////////////////////////////
-// Make the DIV element draggable:
-/*dragElement(document.getElementById("drag"));
 
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "gable")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "gable").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
-  }
 
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
 
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
 
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-/////////////////////////////
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*function powerOffEffect() {
-    let effect = document.getElementById("mainContainer");
-    effect.classList.toggle("container-dim-effect");
-}
-
-setInterval(powerOffEffect, 1000*10);
-/*
-
-/* function testHideMenu() {
-    let startDisplaySetting = document.getElementById("startMenu");
-    if (startDisplaySetting.style.display === "block") {
-        startDisplaySetting.style.display = "none";
-    } else {
-        startDisplaySetting.style.display = "block";
-    }
-}    
-*/    
-
-/* function startButtonStyle() {
-    let ajk = document.getElementById("thestartbutton");
-    ajk.classList.toggle("start-button-active");
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* function testHideMenu() {
-    let qwe = document.getElementById("startMenu");
-    if (qwe.style.display === "block") {
-        qwe.style.display = "none";
-    }
-    }
-*/
-/* function hideMenu() {
-    var menuHide = document.getElementsByClassName("hideMenu");
-    var menuToggle = document.getElementById("startMenu");
-    if (menuToggle.style.display === "block") {
-        menuToggle.style.display = "none";
-    }
-} 
-while startMenu.style.display === "block";
-do {
-  startMenu.style.display = "none";
-}
-function toggleTest() {
-    let asd = document.getElementById("startMenu");
-    do {
-        asd.style.display = "none";
-     }
-    while (asd.style.display = "block"); 
-}
-*/
 
