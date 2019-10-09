@@ -36,11 +36,11 @@ const weatherapi = "https://fcc-weather-api.glitch.me/api/current?lat=44.439663&
 fetch(weatherapi).then(response => {
     return response.json();
 }).then(weathersettings => {
-    /*currentTemperature = Math.trunc((weathersettings.currently.temperature - 32) * 5/9);*/
+    currentTemperature = Math.trunc((weathersettings.main.temp - 32) * 5/9);
     console.log(weathersettings);
-   /* temperatureDiv.innerHTML = currentTemperature + "°C";
-    weatherDescription.innerHTML = weathersettings.currently.summary;
-    console.log(weatherdescription.currently.summary); */
+    temperatureDiv.innerHTML = currentTemperature + "°C";
+    weatherDescription.innerHTML = weathersettings.weather[0].main;
+    console.log(weatherdescription.currently.summary); 
 });
 
 
