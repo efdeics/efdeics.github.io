@@ -40,7 +40,8 @@ fetch(weatherapi).then(response => {
     console.log(weathersettings);
     temperatureDiv.innerHTML = currentTemperature + "°C";
     weatherDescription.innerHTML = weathersettings.weather[0].main;
-    console.log(weatherdescription.currently.summary); 
+    console.log(weathersettings.weather[0].main);
+    /* console.log(weatherdescription.currently.summary); */
 });
 
 
@@ -214,7 +215,7 @@ document.addEventListener("mousemove", function(e) {
 document.getElementById("movableAswell").addEventListener("dblclick", function() {
     document.getElementById("welcomefoldermove").style.display = "block";
 })
-document.getElementById("weatherdesktopicon").addEventListener("onclick", function() {
+document.getElementById("weatherdesktopicon").addEventListener("click", function() {
     document.getElementById("weatherfolder").style.display = "block";
 })
 
