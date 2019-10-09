@@ -39,8 +39,8 @@ fetch(weatherapi).then(response => {
     currentTemperature = Math.trunc((weathersettings.currently.temperature - 32) * 5/9);
     console.log(weathersettings);
     temperatureDiv.innerHTML = currentTemperature + "°C";
-    weatherDescription.innerHTML = weathersettings.summary;
-    console.log(weatherdescription.summary);
+    weatherDescription.innerHTML = weathersettings.currently.summary;
+    console.log(weatherdescription.currently.summary);
 });
 
 
