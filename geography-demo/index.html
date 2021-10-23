@@ -151,7 +151,7 @@
                 randomizeButton.disabled = true;
                 return 
             };
-            if(answerInput.value === currentCounty) {
+            if((answerInput.value).toLowerCase() === currentCounty || answerInput.value === currentCounty) {
                 console.log('You guessed correctly!');
                 counties[indexes[index]].style.fill = 'green';
                 counties[indexes[index]].text = counties[indexes[index]].getAttribute('name');
