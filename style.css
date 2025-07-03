@@ -2132,7 +2132,7 @@
 	border-bottom: 1px solid rgb(63, 63, 63);
 	border-left: 1px solid rgb(208, 207, 192);
 	z-index: 200;
-	display: none;
+	/* display: none; */
 }
 .welcomefolderinner {
 	box-sizing: border-box;
